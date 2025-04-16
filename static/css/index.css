@@ -1,0 +1,181 @@
+/* =======================
+   RESET + BASE
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Manrope", sans-serif;
+    background-color: #f5f9fc;
+    color: #273346;
+  }
+  
+  /* =======================
+     CONTAINER STRUCTURE
+  ========================== */
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px; /* for header */
+    transition: margin-left 0.3s ease;
+  }
+  
+  .main-content {
+    width: 100%;
+    transition: margin-left 0.3s ease;
+    padding: 0;
+    margin-left: 220px;
+  }
+  
+  .sidebar-collapsed .main-container {
+    margin-left: 70px;
+  }
+  
+  .sidebar-collapsed .main-content {
+    margin-left: 70px;
+  }
+  
+.hero-section {
+  width: 100%;
+  margin-top: -80px;
+  padding: 60px 20px 40px 20px; /* Reduced top and bottom padding */
+  background: linear-gradient(to right, #001f3f, #00b0ff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+  /* =======================
+     HEADER
+  ========================== */
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #001f3f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 999;
+  }
+  
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header-logo img {
+    height: 50px;
+  }
+  
+  .header-logo h1 {
+    font-size: 20px;
+    color: #00b0ff;
+  }
+  
+  .header-right .tagline {
+    font-size: 14px;
+    color: #e0f7ff;
+  }
+  
+  /* =======================
+     FOOTER
+  ========================== */
+  .footer-section {
+    padding: 40px;
+    background-color: #001c2f;
+    color: white;
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #a0aec0;
+    text-align: center;
+  }
+  
+  /* =======================
+     RESPONSIVE
+  ========================== */
+  @media screen and (max-width: 992px) {
+    .main-content {
+      margin-left: 0;
+    }
+  
+    .sidebar-container {
+      width: 70px;
+    }
+  
+    .sidebar {
+      width: 70px;
+      overflow: hidden;
+    }
+  
+    .sidebar-container.expanded .sidebar {
+      width: 220px;
+    }
+  
+    .main-container,
+    .main-content {
+      margin-left: 70px;
+    }
+  
+    .sidebar-container.expanded ~ .main-container,
+    .sidebar-container.expanded ~ .main-content {
+      margin-left: 220px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .main-content {
+      padding: 80px 10px 40px;
+    }
+  
+    .hero-section {
+      flex-direction: column;
+      padding: 60px 20px;
+    }
+  
+    .sidebar-container {
+      position: fixed;
+      height: 100vh;
+      z-index: 1000;
+    }
+  
+    .sidebar {
+      display: none;
+    }
+  
+    .sidebar.active {
+      display: block;
+    }
+  
+    .toggle-btn {
+      display: block;
+      position: fixed;
+      top: 85px;
+      left: 10px;
+      background-color: #001f3f;
+      color: white;
+      border: none;
+      font-size: 24px;
+      padding: 6px 10px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  }
+  
+  .hero-text {
+    margin-top: 40px; /* 👈 pushes content downward */
+  }
+  

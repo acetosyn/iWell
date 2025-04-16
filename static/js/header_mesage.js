@@ -1,5 +1,4 @@
 // header_message.js
-
 document.addEventListener("DOMContentLoaded", () => {
     const messages = [
       "💬 Meet iWell, your personal AI assistant for healthcare, mental health, diagnostics, child and maternal care.",
@@ -12,21 +11,21 @@ document.addEventListener("DOMContentLoaded", () => {
     let charIndex = 0;
   
     function type() {
-      if (!typewriter) return; // element not found
+      if (!typewriter) return;
   
       const currentMessage = messages[messageIndex];
   
       if (charIndex < currentMessage.length) {
-        typewriter.innerHTML += currentMessage.charAt(charIndex);
+        typewriter.textContent += currentMessage.charAt(charIndex);
         charIndex++;
         setTimeout(type, 40);
       } else {
         setTimeout(() => {
-          typewriter.innerHTML = "";
+          typewriter.textContent = "";
           charIndex = 0;
           messageIndex = (messageIndex + 1) % messages.length;
           type();
-        }, 4000); // shorter wait between cycles
+        }, 6000);
       }
     }
   

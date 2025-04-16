@@ -3,7 +3,7 @@
     overflow: hidden;
     width: 100%;
     max-width: 500px;
-    margin: 3rem auto;
+    margin: 1rem auto; /* 👈 Reduced from 3rem */
   }
   
   .toggle-slider {

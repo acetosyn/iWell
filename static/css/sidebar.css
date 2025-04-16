@@ -1,0 +1,146 @@
+/* =======================
+   SIDEBAR
+========================== */
+.sidebar-container {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background-color: #001c2f;
+    color: white;
+    transition: width 0.3s ease;
+    z-index: 998;
+  }
+  
+  .sidebar-container.collapsed {
+    width: 60px;
+  }
+  
+  .sidebar-container.collapsed .sidebar {
+    display: none;
+  }
+  
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    top: 85px;
+    left: 10px;
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 6px 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .sidebar {
+    padding: 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+  
+  .nav-links button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s ease;
+  }
+  
+  .nav-links button:hover,
+  .nav-links button.active {
+    background-color: #00b0ff;
+    color: white;
+  }
+  
+  /* =======================
+     GRID SECTIONS
+  ========================== */
+  .about-grid,
+  .service-grid,
+  .testimonial-grid,
+  .footer-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 24px;
+  }
+  
+  .about-card,
+  .service-card,
+  .testimonial-card,
+  .footer-brand,
+  .footer-links,
+  .footer-contact {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+  }
+  
+  .section-content {
+    margin-left: 20px;
+    margin-top: 40px;
+    padding: 0 40px;
+  }
+  
+  .hero-image img {
+    max-width: 400px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #00b0ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #007bbf;
+  }
+  
+  .green-text {
+    color: #c8fa00;
+  }
+  
+  /* =======================
+     RESPONSIVE
+  ========================== */
+  @media screen and (max-width: 768px) {
+    .sidebar-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .toggle-btn {
+      top: 75px;
+    }
+  
+    .main-content {
+      margin-left: 0 !important;
+      padding: 80px 20px 40px;
+    }
+  }
+  
