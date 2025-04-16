@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iWell – Your Nigerian Medical AI</title>
+  <link rel="icon" href="{{ url_for('static', filename='images/iwell.png') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/toggle.css') }}">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-logo">
+      <img src="{{ url_for('static', filename='images/logo5.png') }}" alt="iWell Logo">
+      <h1>iWell</h1>
+    </div>
+    <div class="header-right">
+      <span class="tagline">Your Nigerian Medical AI</span>
+    </div>
+  </header>
+
+  <!-- Sidebar + Toggle -->
+  <div class="sidebar-container">
+    <button id="toggleSidebar" class="toggle-btn">☰</button>
+    <nav class="sidebar" id="sidebar">
+      <ul class="nav-links">
+        <li><button onclick="location.href='#home'">🏠 Home</button></li>
+        <li><button onclick="location.href='#about'">📖 About</button></li>
+        <li><button onclick="location.href='#mental-health'">🧠 Mental Health</button></li>
+        <li><button onclick="location.href='#diagnostics'">🔬 Diagnostics</button></li>
+        <li><button onclick="location.href='#maternal-care'">🤱 Maternal & Child</button></li>
+        <li><button onclick="location.href='#chatbot'">💬 AI Chat</button></li>
+        <li><button onclick="location.href='#testimonials'">🌟 Testimonials</button></li>
+        <li><button onclick="location.href='#footer'">📞 Contact</button></li>
+      </ul>
+    </nav>
+  </div>
+<!-- Main Container -->
+<div class="main-container">
+  <div class="main-content">
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Welcome to <span class="green-text">iWell</span></h1>
+
+      <!-- Typewriter message appears here -->
+      <p id="typewriter" class="tagline"></p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Feature Cards Carousel -->
+<div class="toggle-section">
+  <div class="toggle-slider" id="feature-slider">
+    <!-- Slide 1 -->
+    <div class="slide">
+      <div class="card">
+        <h3>🤖 AI Support</h3>
+        <p>Fast, smart answers 24/7.</p>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide">
+      <div class="card">
+        <h3>🧑🏽‍⚕️ Medical Insight</h3>
+        <p>Built with doctors to ensure relevance.</p>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide">
+      <div class="card">
+        <h3>🇳🇬 Local Focus</h3>
+        <p>Made for the culture, people, and places of Nigeria.</p>
+      </div>
+    </div>
+    <!-- Slide 4 -->
+    <div class="slide">
+      <div class="card">
+        <h3>Mental Health</h3>
+        <p>Support for stress, anxiety, and sleep problems.</p>
+      </div>
+    </div>
+    <!-- Slide 5 -->
+    <div class="slide">
+      <div class="card">
+        <h3>Symptoms & Advice</h3>
+        <p>Describe how you feel, get suggestions instantly.</p>
+      </div>
+    </div>
+    <!-- Slide 6 -->
+    <div class="slide">
+      <div class="card">
+        <h3>Maternal Care</h3>
+        <p>Tips and tracking for pregnancy, babies & moms.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination Dots -->
+  <div class="toggle-dots" id="feature-dots"></div>
+</div>
+
+<!-- Chatbot Section -->
+<section id="chatbot" class="chat-section">
+  <div class="section-content">
+    <h2>💬 iWell Chat</h2>
+    <div class="chat-interface">
+      <div class="chat-area">
+        <!-- Updated Chat Header -->
+        <div class="chat-area-header">
+          <div class="chat-area-title">
+            <img class="chat-header-icon" src="/static/images/bot.jpg" alt="Bot" />
+            <span>iWell Medical Assistant</span>
+          </div>
+          <div class="chat-status">Online</div>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chat-area-main" id="chat-box">
+          <div class="chat-msg bot">
+            <div class="chat-msg-profile">
+              <img class="chat-msg-img" src="/static/images/bot.jpg" alt="Bot Avatar" />
+              <div class="chat-msg-date">iWell • now</div>
+            </div>
+            <div class="chat-msg-content">
+              <div class="chat-msg-text">👋 Hello! I’m iWell. Ask me anything about your health.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Input Footer -->
+        <div class="chat-area-footer">
+          <!-- Video Call -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="feather feather-video" viewBox="0 0 24 24">
+            <path d="M23 7l-7 5 7 5V7z" />
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+          </svg>
+
+          <!-- Upload Image -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="feather feather-image" viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <path d="M21 15l-5-5L5 21" />
+          </svg>
+
+          <!-- Plus (More Options) -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="feather feather-plus-circle" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 8v8M8 12h8" />
+          </svg>
+
+          <!-- Attach File -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="feather feather-paperclip" viewBox="0 0 24 24">
+            <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" />
+          </svg>
+
+          <!-- User Input -->
+          <input type="text" id="user-input" placeholder="Type something here..." autocomplete="off" />
+
+          <!-- Emoji -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="feather feather-smile" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01" />
+          </svg>
+
+          <!-- Thumbs Up -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="feather feather-thumbs-up" viewBox="0 0 24 24">
+            <path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3zM7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3" />
+          </svg>
+
+          <!-- Send Button -->
+          <svg class="feather feather-send" viewBox="0 0 24 24" id="send-btn">
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="testimonials-section">
+        <div class="section-content">
+          <h2>🌟 People Love iWell</h2>
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <p>"Helped me sleep better during tough times."</p>
+              <h4>– Chidera, Lagos</h4>
+            </div>
+            <div class="testimonial-card">
+              <p>"Gave me real advice for my baby’s fever."</p>
+              <h4>– Ngozi, Enugu</h4>
+            </div>
+            <div class="testimonial-card">
+              <p>"Feels like chatting with a doctor-friend."</p>
+              <h4>– Tunde, Abuja</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+          <p class="footer-bottom">© 2025 iWell. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/toggle.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/header_mesage.js') }}"></script>
+</body>
+</html>
