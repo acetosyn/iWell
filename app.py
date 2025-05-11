@@ -1,7 +1,7 @@
 # app.py
 
 from flask import Flask, render_template, request, jsonify
-# from engine import get_bot_reply
+from engine import get_bot_reply  # Now active
 
 app = Flask(__name__)
 
